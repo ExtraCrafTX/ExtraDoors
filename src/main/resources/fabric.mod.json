@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "extradoors",
+  "version": "${version}",
+  "name": "ExtraDoors",
+  "description": "Adds a bunch of doors!",
+  "authors": [
+    "ExtraCrafTX"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/extradoors/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.extracraftx.minecraft.extradoors.ExtraDoors"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  },
+  "mixins": [
+    "extradoors.mixins.json"
+  ]
+}
