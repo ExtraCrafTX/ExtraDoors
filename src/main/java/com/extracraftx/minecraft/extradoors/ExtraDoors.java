@@ -2,6 +2,8 @@ package com.extracraftx.minecraft.extradoors;
 
 import net.fabricmc.api.ModInitializer;
 
+import com.extracraftx.minecraft.extradoors.block.Blocks;
+
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,8 +17,7 @@ public class ExtraDoors implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        log(Level.INFO, "Initializing");
-        //TODO: Initializer
+        Blocks.registerBlocks();
     }
 
     public static void log(Level level, String message){
