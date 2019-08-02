@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "gold_trapdoor",
+    "pattern": [
+        "GG",
+        "GG"
+    ],
+    "key": {
+        "G": {
+            "item": "minecraft:gold_ingot"
+        }
+    },
+    "result": {
+        "item": "extradoors:gold_trapdoor",
+        "count": 1
+    }
+}

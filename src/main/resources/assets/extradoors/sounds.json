@@ -1,0 +1,8 @@
+{
+    "locked": {
+        "subtitle": "Lock clacks",
+        "sounds": [
+            "extradoors:locked"
+        ]
+    }
+}

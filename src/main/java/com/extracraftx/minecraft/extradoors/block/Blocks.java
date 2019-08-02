@@ -9,11 +9,17 @@ import net.minecraft.util.registry.Registry;
 public class Blocks {
 
     public static GoldDoorBlock GOLD_DOOR;
+    public static GoldTrapdoorBlock GOLD_TRAPDOOR;
 
     public static void registerBlocks() {
-        GOLD_DOOR = Registry.register(Registry.BLOCK, new Identifier("extradoors", "gold_door"), new GoldDoorBlock());
-        Registry.register(Registry.ITEM, new Identifier("extradoors", "gold_door"),
+        Identifier gold_door = new Identifier("extradoors", "gold_door");
+        GOLD_DOOR = Registry.register(Registry.BLOCK, gold_door, new GoldDoorBlock());
+        Registry.register(Registry.ITEM, gold_door,
                 new BlockItem(GOLD_DOOR, new Item.Settings().group(ItemGroup.REDSTONE)));
+        Identifier gold_trapdoor = new Identifier("extradoors", "gold_trapdoor");
+        GOLD_TRAPDOOR = Registry.register(Registry.BLOCK, gold_trapdoor, new GoldTrapdoorBlock());
+        Registry.register(Registry.ITEM, gold_trapdoor,
+                new BlockItem(GOLD_TRAPDOOR, new Item.Settings().group(ItemGroup.REDSTONE)));
     }
 
 }
