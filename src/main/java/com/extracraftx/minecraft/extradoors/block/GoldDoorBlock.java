@@ -35,7 +35,7 @@ public class GoldDoorBlock extends DoorBlock {
             world.playLevelEvent(player, state.get(OPEN) ? 1011 : 1005, pos, 0);
             return true;
         }
-        world.playSound(null, pos, Sounds.LOCKED, SoundCategory.BLOCKS, 1, world.random.nextFloat() * 0.1f + 1f);
+        world.playSound(player, pos, Sounds.LOCKED, SoundCategory.BLOCKS, 1, world.random.nextFloat() * 0.1f + 0.8f);
         return true;
     }
 

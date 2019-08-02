@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "extradoors:bamboo_door"
+        ]
+    },
+    "criteria": {
+        "has_bamboo": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:bamboo"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "extradoors:bamboo_door"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_bamboo",
+            "has_the_recipe"
+        ]
+    ]
+}
