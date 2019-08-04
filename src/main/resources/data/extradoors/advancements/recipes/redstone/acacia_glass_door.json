@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "extradoors:acacia_glass_door"
+        ]
+    },
+    "criteria": {
+        "has_acacia_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:acacia_door"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "extradoors:acacia_glass_door"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_acacia_door",
+            "has_the_recipe"
+        ]
+    ]
+}
