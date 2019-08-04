@@ -1,5 +1,8 @@
 package com.extracraftx.minecraft.extradoors.block;
 
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.minecraft.block.Block;
+import net.minecraft.block.DoorBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -12,21 +15,25 @@ public class Blocks {
     public static GoldTrapdoorBlock GOLD_TRAPDOOR;
     public static BambooDoorBlock BAMBOO_DOOR;
 
-    public static void registerBlocks() {
-        Identifier gold_door = new Identifier("extradoors", "gold_door");
-        GOLD_DOOR = Registry.register(Registry.BLOCK, gold_door, new GoldDoorBlock());
-        Registry.register(Registry.ITEM, gold_door,
-                new BlockItem(GOLD_DOOR, new Item.Settings().group(ItemGroup.REDSTONE)));
+    public static DoorBlock ACACIA_GLASS_DOOR;
 
-        Identifier gold_trapdoor = new Identifier("extradoors", "gold_trapdoor");
-        GOLD_TRAPDOOR = Registry.register(Registry.BLOCK, gold_trapdoor, new GoldTrapdoorBlock());
-        Registry.register(Registry.ITEM, gold_trapdoor,
-                new BlockItem(GOLD_TRAPDOOR, new Item.Settings().group(ItemGroup.REDSTONE)));
-                
-        Identifier bamboo_door = new Identifier("extradoors", "bamboo_door");
-        BAMBOO_DOOR = Registry.register(Registry.BLOCK, bamboo_door, new BambooDoorBlock());
-        Registry.register(Registry.ITEM, bamboo_door,
-                new BlockItem(BAMBOO_DOOR, new Item.Settings().group(ItemGroup.DECORATIONS)));
+    public static void registerBlocks() {
+        GOLD_DOOR = registerBlock("gold_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
+        
+        GOLD_TRAPDOOR = registerBlock("gold_trapdoor", new GoldTrapdoorBlock(), ItemGroup.REDSTONE);
+
+        BAMBOO_DOOR = registerBlock("bamboo_door", new BambooDoorBlock(), ItemGroup.DECORATIONS);
+
+        ACACIA_GLASS_DOOR = registerBlock("acacia_glass_door",
+                new ExtraDoorBlock(FabricBlockSettings.copy(net.minecraft.block.Blocks.ACACIA_DOOR).build()),
+                ItemGroup.REDSTONE);
+    }
+
+    private static <T extends Block> T registerBlock(String name, T block, ItemGroup group) {
+        Identifier id = new Identifier("extradoors", name);
+        T registered = Registry.register(Registry.BLOCK, id, block);
+        Registry.register(Registry.ITEM, id, new BlockItem(registered, new Item.Settings().group(group)));
+        return registered;
     }
 
 }
