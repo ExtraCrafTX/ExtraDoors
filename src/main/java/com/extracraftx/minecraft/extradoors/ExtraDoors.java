@@ -19,6 +19,7 @@ public class ExtraDoors implements ModInitializer {
     @Override
     public void onInitialize() {
         Blocks.registerBlocks();
+        ItemGroups.createItemGroups();
         Sounds.registerSounds();
     }
 

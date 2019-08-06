@@ -18,7 +18,7 @@ import net.minecraft.world.World;
 public class BambooDoorBlock extends DoorBlock {
 
     public BambooDoorBlock() {
-        super(FabricBlockSettings.of(Material.BAMBOO).strength(1.5f, 1.5f).sounds(BlockSoundGroup.BAMBOO).build());
+        super(FabricBlockSettings.of(Material.BAMBOO).strength(1f, 1f).sounds(BlockSoundGroup.BAMBOO).build());
     }
 
     @Override

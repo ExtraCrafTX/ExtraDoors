@@ -36,7 +36,7 @@ public class GoldTrapdoorBlock extends TrapdoorBlock {
             playToggleSound(player, world, pos, state.get(OPEN));
             return true;
         }
-        world.playSound(player, pos, Sounds.LOCKED, SoundCategory.BLOCKS, 1.1f, world.random.nextFloat() * 0.1f + 0.8f);
+        world.playSound(player, pos, Sounds.LOCKED, SoundCategory.BLOCKS, 1.1f, world.random.nextFloat() * 0.1f + 1f);
         return true;
     }
 
