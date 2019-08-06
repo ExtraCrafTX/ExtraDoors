@@ -17,6 +17,7 @@ public class Blocks {
     public static GoldDoorBlock GOLD_DOOR;
     public static GoldTrapdoorBlock GOLD_TRAPDOOR;
     public static BambooDoorBlock BAMBOO_DOOR;
+    public static GlassDoorBlock GLASS_DOOR;
 
     public static DoorBlock ACACIA_GLASS_DOOR;
 
@@ -24,6 +25,7 @@ public class Blocks {
         GOLD_DOOR = registerBlock("gold_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
         GOLD_TRAPDOOR = registerBlock("gold_trapdoor", new GoldTrapdoorBlock(), ItemGroup.REDSTONE);
         BAMBOO_DOOR = registerBlock("bamboo_door", new BambooDoorBlock(), ItemGroup.DECORATIONS);
+        GLASS_DOOR = registerBlock("glass_door", new GlassDoorBlock(), ItemGroup.REDSTONE);
 
         ACACIA_GLASS_DOOR = registerBlock("acacia_glass_door", new ExtraDoorBlock(ACACIA_DOOR), ItemGroup.REDSTONE);
     }

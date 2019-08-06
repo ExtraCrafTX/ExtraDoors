@@ -2,5 +2,8 @@
     "block.extradoors.gold_door": "Golden Door",
     "block.extradoors.gold_trapdoor": "Golden Trapdoor",
     "block.extradoors.bamboo_door": "Bamboo Door",
-    "block.extradoors.acacia_glass_door": "Acacia Glass Door"
+    "block.extradoors.glass_door": "Glass Door",
+    "block.extradoors.acacia_glass_door": "Acacia Glass Door",
+    "itemGroup.extradoors.doors": "Doors",
+    "itemGroup.extradoors.trapdoors": "Trapdoors"
 }
