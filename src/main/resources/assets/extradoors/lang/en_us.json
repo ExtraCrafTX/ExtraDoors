@@ -6,6 +6,7 @@
     "block.extradoors.iron_glass_door": "Iron Glass Door",
     "block.extradoors.birch_glass_door": "Birch Glass Door",
     "block.extradoors.acacia_glass_door": "Acacia Glass Door",
+    "block.extradoors.dark_oak_glass_door": "Dark Oak Glass Door",
     "itemGroup.extradoors.doors": "Doors",
     "itemGroup.extradoors.trapdoors": "Trapdoors"
 }
