@@ -44,6 +44,7 @@ public class ItemGroups {
                 stacks.add(new ItemStack(Blocks.GLASS_DOOR));
                 
                 stacks.add(new ItemStack(Blocks.IRON_GLASS_DOOR));
+                stacks.add(new ItemStack(Blocks.BIRCH_GLASS_DOOR));
                 stacks.add(new ItemStack(Blocks.ACACIA_GLASS_DOOR));
             })
             .build();

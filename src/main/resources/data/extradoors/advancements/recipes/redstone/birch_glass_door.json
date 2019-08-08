@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "extradoors:birch_glass_door"
+        ]
+    },
+    "criteria": {
+        "has_birch_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:birch_door"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "extradoors:birch_glass_door"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_birch_door",
+            "has_the_recipe"
+        ]
+    ]
+}
