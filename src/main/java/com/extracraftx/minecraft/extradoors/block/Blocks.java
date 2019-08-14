@@ -26,6 +26,7 @@ public class Blocks {
     public static DoorBlock BIRCH_GLASS_DOOR;
     public static DoorBlock ACACIA_GLASS_DOOR;
     public static DoorBlock DARK_OAK_GLASS_DOOR;
+    public static GoldDoorBlock GOLD_GLASS_DOOR;
 
     public static void registerBlocks() {
         GOLD_DOOR = registerBlock("gold_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
@@ -37,6 +38,8 @@ public class Blocks {
         BIRCH_GLASS_DOOR = registerBlock("birch_glass_door", new ExtraDoorBlock(BIRCH_DOOR), ItemGroup.REDSTONE);
         ACACIA_GLASS_DOOR = registerBlock("acacia_glass_door", new ExtraDoorBlock(ACACIA_DOOR), ItemGroup.REDSTONE);
         DARK_OAK_GLASS_DOOR = registerBlock("dark_oak_glass_door", new ExtraDoorBlock(DARK_OAK_DOOR), ItemGroup.REDSTONE);
+        
+        GOLD_GLASS_DOOR = registerBlock("gold_glass_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
     }
 
     private static <T extends Block> T registerBlock(String name, T block, ItemGroup group) {

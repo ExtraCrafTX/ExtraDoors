@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "extradoors:gold_glass_door"
+        ]
+    },
+    "criteria": {
+        "has_gold_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:gold_door"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "extradoors:gold_glass_door"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_gold_door",
+            "has_the_recipe"
+        ]
+    ]
+}
