@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "wooden_glass_door",
+    "ingredients": [
+        {
+            "item": "minecraft:jungle_door"
+        },
+        {
+            "item": "minecraft:glass_pane"
+        }
+    ],
+    "result": {
+        "item": "extradoors:jungle_glass_door"
+    }
+}
