@@ -1,6 +1,7 @@
 package com.extracraftx.minecraft.extradoors.block;
 
 import static net.minecraft.block.Blocks.IRON_DOOR;
+import static net.minecraft.block.Blocks.OAK_DOOR;
 import static net.minecraft.block.Blocks.BIRCH_DOOR;
 import static net.minecraft.block.Blocks.JUNGLE_DOOR;
 import static net.minecraft.block.Blocks.ACACIA_DOOR;
@@ -24,6 +25,7 @@ public class Blocks {
     public static GlassDoorBlock GLASS_DOOR;
 
     public static DoorBlock IRON_GLASS_DOOR;
+    public static DoorBlock OAK_GLASS_DOOR;
     public static DoorBlock BIRCH_GLASS_DOOR;
     public static DoorBlock JUNGLE_GLASS_DOOR;
     public static DoorBlock ACACIA_GLASS_DOOR;
@@ -37,6 +39,7 @@ public class Blocks {
         GLASS_DOOR = registerBlock("glass_door", new GlassDoorBlock(), ItemGroup.REDSTONE);
 
         IRON_GLASS_DOOR = registerBlock("iron_glass_door", new ExtraDoorBlock(IRON_DOOR), ItemGroup.REDSTONE);
+        OAK_GLASS_DOOR = registerBlock("oak_glass_door", new ExtraDoorBlock(OAK_DOOR), ItemGroup.REDSTONE);
         BIRCH_GLASS_DOOR = registerBlock("birch_glass_door", new ExtraDoorBlock(BIRCH_DOOR), ItemGroup.REDSTONE);
         JUNGLE_GLASS_DOOR = registerBlock("jungle_glass_door", new ExtraDoorBlock(JUNGLE_DOOR), ItemGroup.REDSTONE);
         ACACIA_GLASS_DOOR = registerBlock("acacia_glass_door", new ExtraDoorBlock(ACACIA_DOOR), ItemGroup.REDSTONE);
