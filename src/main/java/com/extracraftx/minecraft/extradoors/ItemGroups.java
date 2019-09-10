@@ -25,6 +25,8 @@ public class ItemGroups {
                 stacks.add(new ItemStack(Items.IRON_TRAPDOOR));
 
                 stacks.add(new ItemStack(Blocks.GOLD_TRAPDOOR));
+                stacks.add(new ItemStack(Blocks.BAMBOO_TRAPDOOR));
+                stacks.add(new ItemStack(Blocks.GLASS_TRAPDOOR));
             })
             .build();
         

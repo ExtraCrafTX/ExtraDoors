@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "bamboo_trapdoor",
+    "pattern": [
+        "BBB",
+        "BBB"
+    ],
+    "key": {
+        "B": {
+            "item": "minecraft:bamboo"
+        }
+    },
+    "result": {
+        "item": "extradoors:bamboo_trapdoor",
+        "count": 2
+    }
+}
