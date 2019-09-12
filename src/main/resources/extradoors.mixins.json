@@ -2,7 +2,10 @@
   "required": true,
   "package": "com.extracraftx.minecraft.extradoors.mixin",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [],
+  "mixins": [
+    "InteractableDoorsSensorMixin",
+    "OpenDoorsTaskMixin"
+  ],
   "client": [],
   "server": [],
   "injectors": {

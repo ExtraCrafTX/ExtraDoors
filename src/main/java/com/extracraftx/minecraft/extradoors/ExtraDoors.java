@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import com.extracraftx.minecraft.extradoors.block.Blocks;
 import com.extracraftx.minecraft.extradoors.sound.Sounds;
+import com.extracraftx.minecraft.extradoors.tags.Tags;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
@@ -21,6 +22,7 @@ public class ExtraDoors implements ModInitializer {
         Blocks.registerBlocks();
         ItemGroups.createItemGroups();
         Sounds.registerSounds();
+        Tags.registerTags();
     }
 
     public static void log(Level level, String message){
