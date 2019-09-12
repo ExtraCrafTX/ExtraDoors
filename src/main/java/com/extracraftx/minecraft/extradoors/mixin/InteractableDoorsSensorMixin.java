@@ -14,7 +14,6 @@ public class InteractableDoorsSensorMixin{
 
     @ModifyArg(method = "sense", at = @At(value="INVOKE", target = "Lnet/minecraft/block/BlockState;matches(Lnet/minecraft/tag/Tag;)Z"), index=0)
     private Tag modifyTag(Tag tag){
-        System.out.println("Modify Inject success");
         return Tags.INTERACTABLE_DOORS;
     }
 
