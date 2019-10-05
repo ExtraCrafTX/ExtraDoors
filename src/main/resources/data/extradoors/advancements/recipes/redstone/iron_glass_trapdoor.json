@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "extradoors:iron_glass_trapdoor"
+        ]
+    },
+    "criteria": {
+        "has_iron_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:iron_trapdoor"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "extradoors:iron_glass_trapdoor"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_iron_trapdoor",
+            "has_the_recipe"
+        ]
+    ]
+}

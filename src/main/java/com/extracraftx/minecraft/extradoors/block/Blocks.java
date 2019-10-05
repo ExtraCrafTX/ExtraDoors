@@ -8,10 +8,13 @@ import static net.minecraft.block.Blocks.JUNGLE_DOOR;
 import static net.minecraft.block.Blocks.ACACIA_DOOR;
 import static net.minecraft.block.Blocks.DARK_OAK_DOOR;
 
+import static net.minecraft.block.Blocks.IRON_TRAPDOOR;
+
 import com.extracraftx.minecraft.extradoors.ExtraDoors;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.DoorBlock;
+import net.minecraft.block.TrapdoorBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -36,6 +39,8 @@ public class Blocks {
     public static DoorBlock DARK_OAK_GLASS_DOOR;
     public static GoldDoorBlock GOLD_GLASS_DOOR;
 
+    public static TrapdoorBlock IRON_GLASS_TRAPDOOR;
+
     public static void registerBlocks() {
         GOLD_DOOR = registerBlock("gold_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
         GOLD_TRAPDOOR = registerBlock("gold_trapdoor", new GoldTrapdoorBlock(), ItemGroup.REDSTONE);
@@ -53,6 +58,8 @@ public class Blocks {
         DARK_OAK_GLASS_DOOR = registerBlock("dark_oak_glass_door", new ExtraDoorBlock(DARK_OAK_DOOR), ItemGroup.REDSTONE);
         
         GOLD_GLASS_DOOR = registerBlock("gold_glass_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
+
+        IRON_GLASS_TRAPDOOR = registerBlock("iron_glass_trapdoor", new ExtraTrapdoorBlock(IRON_TRAPDOOR), ItemGroup.REDSTONE);
     }
 
     private static <T extends Block> T registerBlock(String name, T block, ItemGroup group) {
