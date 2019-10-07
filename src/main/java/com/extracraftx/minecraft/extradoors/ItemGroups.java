@@ -30,6 +30,7 @@ public class ItemGroups {
 
                 stacks.add(new ItemStack(Blocks.IRON_GLASS_TRAPDOOR));
                 stacks.add(new ItemStack(Blocks.OAK_GLASS_TRAPDOOR));
+                stacks.add(new ItemStack(Blocks.SPRUCE_GLASS_TRAPDOOR));
             })
             .build();
         

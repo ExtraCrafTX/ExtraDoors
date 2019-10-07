@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "extradoors:spruce_glass_trapdoor"
+        ]
+    },
+    "criteria": {
+        "has_spruce_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:spruce_trapdoor"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "extradoors:spruce_glass_trapdoor"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_spruce_trapdoor",
+            "has_the_recipe"
+        ]
+    ]
+}
