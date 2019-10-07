@@ -1,6 +1,6 @@
 {
-    "block.extradoors.gold_door": "Golden Door",
-    "block.extradoors.gold_trapdoor": "Golden Trapdoor",
+    "block.extradoors.gold_door": "Gold Door",
+    "block.extradoors.gold_trapdoor": "Gold Trapdoor",
     "block.extradoors.bamboo_door": "Bamboo Door",
     "block.extradoors.bamboo_trapdoor": "Bamboo Trapdoor",
     "block.extradoors.glass_door": "Glass Door",
@@ -13,13 +13,14 @@
     "block.extradoors.acacia_glass_door": "Acacia Glass Door",
     "block.extradoors.dark_oak_glass_door": "Dark Oak Glass Door",
     "block.extradoors.gold_glass_door": "Gold Glass Door",
-    "block.extradoors.iron_glass_trapdoor": "Iron Glass Trapdoor",
     "block.extradoors.oak_glass_trapdoor": "Oak Glass Trapdoor",
     "block.extradoors.spruce_glass_trapdoor": "Spruce Glass Trapdoor",
     "block.extradoors.birch_glass_trapdoor": "Birch Glass Trapdoor",
     "block.extradoors.jungle_glass_trapdoor": "Jungle Glass Trapdoor",
     "block.extradoors.acacia_glass_trapdoor": "Acacia Glass Trapdoor",
     "block.extradoors.dark_oak_glass_trapdoor": "Dark Oak Glass Trapdoor",
+    "block.extradoors.iron_glass_trapdoor": "Iron Glass Trapdoor",
+    "block.extradoors.gold_glass_trapdoor": "Gold Glass Trapdoor",
     "itemGroup.extradoors.doors": "Doors",
     "itemGroup.extradoors.trapdoors": "Trapdoors"
 }

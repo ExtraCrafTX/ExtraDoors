@@ -45,13 +45,14 @@ public class Blocks {
     public static DoorBlock DARK_OAK_GLASS_DOOR;
     public static GoldDoorBlock GOLD_GLASS_DOOR;
 
-    public static TrapdoorBlock IRON_GLASS_TRAPDOOR;
     public static TrapdoorBlock OAK_GLASS_TRAPDOOR;
     public static TrapdoorBlock SPRUCE_GLASS_TRAPDOOR;
     public static TrapdoorBlock BIRCH_GLASS_TRAPDOOR;
     public static TrapdoorBlock JUNGLE_GLASS_TRAPDOOR;
     public static TrapdoorBlock ACACIA_GLASS_TRAPDOOR;
     public static TrapdoorBlock DARK_OAK_GLASS_TRAPDOOR;
+    public static TrapdoorBlock IRON_GLASS_TRAPDOOR;
+    public static GoldTrapdoorBlock GOLD_GLASS_TRAPDOOR;
 
     public static void registerBlocks() {
         GOLD_DOOR = registerBlock("gold_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
@@ -71,13 +72,15 @@ public class Blocks {
         
         GOLD_GLASS_DOOR = registerBlock("gold_glass_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
 
-        IRON_GLASS_TRAPDOOR = registerBlock("iron_glass_trapdoor", new ExtraTrapdoorBlock(IRON_TRAPDOOR), ItemGroup.REDSTONE);
         OAK_GLASS_TRAPDOOR = registerBlock("oak_glass_trapdoor", new ExtraTrapdoorBlock(OAK_TRAPDOOR), ItemGroup.REDSTONE);
         SPRUCE_GLASS_TRAPDOOR = registerBlock("spruce_glass_trapdoor", new ExtraTrapdoorBlock(SPRUCE_TRAPDOOR), ItemGroup.REDSTONE);
         BIRCH_GLASS_TRAPDOOR = registerBlock("birch_glass_trapdoor", new ExtraTrapdoorBlock(BIRCH_TRAPDOOR), ItemGroup.REDSTONE);
         JUNGLE_GLASS_TRAPDOOR = registerBlock("jungle_glass_trapdoor", new ExtraTrapdoorBlock(JUNGLE_TRAPDOOR), ItemGroup.REDSTONE);
         ACACIA_GLASS_TRAPDOOR = registerBlock("acacia_glass_trapdoor", new ExtraTrapdoorBlock(ACACIA_TRAPDOOR), ItemGroup.REDSTONE);
         DARK_OAK_GLASS_TRAPDOOR = registerBlock("dark_oak_glass_trapdoor", new ExtraTrapdoorBlock(DARK_OAK_TRAPDOOR), ItemGroup.REDSTONE);
+        IRON_GLASS_TRAPDOOR = registerBlock("iron_glass_trapdoor", new ExtraTrapdoorBlock(IRON_TRAPDOOR), ItemGroup.REDSTONE);
+        
+        GOLD_GLASS_TRAPDOOR = registerBlock("gold_glass_trapdoor", new GoldTrapdoorBlock(), ItemGroup.REDSTONE);
     }
 
     private static <T extends Block> T registerBlock(String name, T block, ItemGroup group) {

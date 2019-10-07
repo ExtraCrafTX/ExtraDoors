@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "gold_glass_trapdoor",
+    "ingredients": [
+        {
+            "item": "extradoors:gold_trapdoor"
+        },
+        {
+            "item": "minecraft:glass_pane"
+        }
+    ],
+    "result": {
+        "item": "extradoors:gold_glass_trapdoor"
+    }
+}
