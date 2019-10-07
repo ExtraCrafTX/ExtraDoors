@@ -34,6 +34,7 @@ public class ItemGroups {
                 stacks.add(new ItemStack(Blocks.BIRCH_GLASS_TRAPDOOR));
                 stacks.add(new ItemStack(Blocks.JUNGLE_GLASS_TRAPDOOR));
                 stacks.add(new ItemStack(Blocks.ACACIA_GLASS_TRAPDOOR));
+                stacks.add(new ItemStack(Blocks.DARK_OAK_GLASS_TRAPDOOR));
             })
             .build();
         
