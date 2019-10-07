@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "extradoors:jungle_glass_trapdoor"
+        ]
+    },
+    "criteria": {
+        "has_jungle_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:jungle_trapdoor"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "extradoors:jungle_glass_trapdoor"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_jungle_trapdoor",
+            "has_the_recipe"
+        ]
+    ]
+}

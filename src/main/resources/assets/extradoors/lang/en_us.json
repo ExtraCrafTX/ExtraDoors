@@ -17,6 +17,7 @@
     "block.extradoors.oak_glass_trapdoor": "Oak Glass Trapdoor",
     "block.extradoors.spruce_glass_trapdoor": "Spruce Glass Trapdoor",
     "block.extradoors.birch_glass_trapdoor": "Birch Glass Trapdoor",
+    "block.extradoors.jungle_glass_trapdoor": "Jungle Glass Trapdoor",
     "itemGroup.extradoors.doors": "Doors",
     "itemGroup.extradoors.trapdoors": "Trapdoors"
 }
