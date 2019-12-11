@@ -7,11 +7,11 @@ import net.minecraft.block.DoorBlock;
 public class ExtraDoorBlock extends DoorBlock{
 
     public ExtraDoorBlock(Settings settings){
-        super(settings);
+        super(settings.nonOpaque());
     }
 
     public ExtraDoorBlock(Block block){
-        super(FabricBlockSettings.copy(block).build());
+        super(FabricBlockSettings.copy(block).nonOpaque().build());
     }
 
 }

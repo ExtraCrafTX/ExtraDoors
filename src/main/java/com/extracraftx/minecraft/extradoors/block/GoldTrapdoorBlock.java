@@ -13,6 +13,7 @@ import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -22,11 +23,11 @@ public class GoldTrapdoorBlock extends TrapdoorBlock {
 
     public GoldTrapdoorBlock() {
         super(FabricBlockSettings.of(Material.METAL, MaterialColor.GOLD).strength(4, 4).sounds(BlockSoundGroup.METAL)
-                .build());
+                .nonOpaque().build());
     }
 
     @Override
-    public boolean activate(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand,
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand,
             BlockHitResult hitResult) {
         if (!state.get(POWERED)) {
             state = state.cycle(OPEN);
@@ -34,10 +35,10 @@ public class GoldTrapdoorBlock extends TrapdoorBlock {
             if (state.get(WATERLOGGED))
                 world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
             playToggleSound(player, world, pos, state.get(OPEN));
-            return true;
+            return ActionResult.SUCCESS;
         }
         world.playSound(player, pos, Sounds.LOCKED, SoundCategory.BLOCKS, 1.1f, world.random.nextFloat() * 0.1f + 1f);
-        return true;
+        return ActionResult.FAIL;
     }
 
     @Override

@@ -13,6 +13,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -23,20 +24,20 @@ public class GoldDoorBlock extends DoorBlock {
 
     public GoldDoorBlock() {
         super(FabricBlockSettings.of(Material.METAL, MaterialColor.GOLD).strength(4, 4).sounds(BlockSoundGroup.METAL)
-                .build());
+                .nonOpaque().build());
     }
 
     @Override
-    public boolean activate(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand,
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand,
             BlockHitResult hitResult) {
         if (!state.get(POWERED)) {
             state = state.cycle(OPEN);
             world.setBlockState(pos, state, 10);
             world.playLevelEvent(player, state.get(OPEN) ? 1011 : 1005, pos, 0);
-            return true;
+            return ActionResult.SUCCESS;
         }
         world.playSound(player, pos, Sounds.LOCKED, SoundCategory.BLOCKS, 1, world.random.nextFloat() * 0.1f + 1.1f);
-        return true;
+        return ActionResult.FAIL;
     }
 
     @Override

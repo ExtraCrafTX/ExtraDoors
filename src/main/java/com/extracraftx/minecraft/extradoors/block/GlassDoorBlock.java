@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 public class GlassDoorBlock extends DoorBlock {
 
     public GlassDoorBlock() {
-        super(FabricBlockSettings.of(Material.GLASS).strength(0.3f, 0.3f).sounds(BlockSoundGroup.GLASS).build());
+        super(FabricBlockSettings.of(Material.GLASS).strength(0.3f, 0.3f).sounds(BlockSoundGroup.GLASS).nonOpaque().build());
     }
 
     @Override

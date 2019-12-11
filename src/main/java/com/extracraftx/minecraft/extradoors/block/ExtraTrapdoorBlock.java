@@ -7,11 +7,11 @@ import net.minecraft.block.TrapdoorBlock;
 public class ExtraTrapdoorBlock extends TrapdoorBlock{
 
     public ExtraTrapdoorBlock(Settings settings){
-        super(settings);
+        super(settings.nonOpaque());
     }
 
     public ExtraTrapdoorBlock(Block block){
-        super(FabricBlockSettings.copy(block).build());
+        super(FabricBlockSettings.copy(block).nonOpaque().build());
     }
 
 }
