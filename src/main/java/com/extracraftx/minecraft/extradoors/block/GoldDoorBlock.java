@@ -37,7 +37,7 @@ public class GoldDoorBlock extends DoorBlock {
             return ActionResult.SUCCESS;
         }
         world.playSound(player, pos, Sounds.LOCKED, SoundCategory.BLOCKS, 1, world.random.nextFloat() * 0.1f + 1.1f);
-        return ActionResult.FAIL;
+        return ActionResult.CONSUME;
     }
 
     @Override

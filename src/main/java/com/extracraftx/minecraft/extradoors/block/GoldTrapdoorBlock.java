@@ -38,7 +38,7 @@ public class GoldTrapdoorBlock extends TrapdoorBlock {
             return ActionResult.SUCCESS;
         }
         world.playSound(player, pos, Sounds.LOCKED, SoundCategory.BLOCKS, 1.1f, world.random.nextFloat() * 0.1f + 1f);
-        return ActionResult.FAIL;
+        return ActionResult.CONSUME;
     }
 
     @Override
