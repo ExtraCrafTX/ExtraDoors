@@ -1,7 +1,9 @@
 package com.extracraftx.minecraft.extradoors.block;
 
+import com.extracraftx.minecraft.extradoors.ExtraDoors;
 import com.extracraftx.minecraft.extradoors.sound.Sounds;
 
+import io.github.chloedawn.couplings.Trapdoors;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -35,6 +37,9 @@ public class GoldTrapdoorBlock extends TrapdoorBlock {
             if (state.get(WATERLOGGED))
                 world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
             playToggleSound(player, world, pos, state.get(OPEN));
+            if(ExtraDoors.COUPLINGS){
+                Trapdoors.used(state, world, pos, player, hand, hitResult, ActionResult.SUCCESS);
+            }
             return ActionResult.SUCCESS;
         }
         world.playSound(player, pos, Sounds.LOCKED, SoundCategory.BLOCKS, 1.1f, world.random.nextFloat() * 0.1f + 1f);

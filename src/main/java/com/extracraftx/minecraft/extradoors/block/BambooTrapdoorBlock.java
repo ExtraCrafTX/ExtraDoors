@@ -1,5 +1,8 @@
 package com.extracraftx.minecraft.extradoors.block;
 
+import com.extracraftx.minecraft.extradoors.ExtraDoors;
+
+import io.github.chloedawn.couplings.Trapdoors;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -31,6 +34,9 @@ public class BambooTrapdoorBlock extends TrapdoorBlock {
         if(state.get(WATERLOGGED))
             world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         playSound(world, player, pos, state);
+        if(ExtraDoors.COUPLINGS){
+            Trapdoors.used(state, world, pos, player, hand, hitResult, ActionResult.SUCCESS);
+        }
         return ActionResult.SUCCESS;
     }
 
@@ -50,7 +56,7 @@ public class BambooTrapdoorBlock extends TrapdoorBlock {
 
     protected void playSound(World world, PlayerEntity player, BlockPos pos, BlockState state) {
         world.playSound(player, pos,
-                state.get(OPEN) ? SoundEvents.BLOCK_WOODEN_DOOR_OPEN : SoundEvents.BLOCK_WOODEN_DOOR_CLOSE,
+                state.get(OPEN) ? SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN : SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE,
                 SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.1f + 1f);
     }
 
