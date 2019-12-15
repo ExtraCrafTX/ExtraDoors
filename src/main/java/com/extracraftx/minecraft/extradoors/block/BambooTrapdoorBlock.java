@@ -49,7 +49,7 @@ public class BambooTrapdoorBlock extends TrapdoorBlock {
 
     protected void playSound(World world, PlayerEntity player, BlockPos pos, BlockState state) {
         world.playSound(player, pos,
-                state.get(OPEN) ? SoundEvents.BLOCK_WOODEN_DOOR_OPEN : SoundEvents.BLOCK_WOODEN_DOOR_CLOSE,
+                state.get(OPEN) ? SoundEvents.BLOCK_WOODEN_TRAPDOOR_OPEN : SoundEvents.BLOCK_WOODEN_TRAPDOOR_CLOSE,
                 SoundCategory.BLOCKS, 1, world.getRandom().nextFloat() * 0.1f + 1f);
     }
 
