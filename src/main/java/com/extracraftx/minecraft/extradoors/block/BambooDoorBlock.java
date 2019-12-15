@@ -1,5 +1,8 @@
 package com.extracraftx.minecraft.extradoors.block;
 
+import com.extracraftx.minecraft.extradoors.ExtraDoors;
+
+import io.github.insomniakitten.couplings.hook.DoorHooks;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -27,13 +30,18 @@ public class BambooDoorBlock extends DoorBlock {
         state = state.cycle(OPEN);
         world.setBlockState(pos, state, 10);
         playSound(world, player, pos, state);
+        if(ExtraDoors.COUPLINGS){
+            DoorHooks.usageCallback(state, world, pos, player, hand, hitResult, true);
+        }
         return true;
     }
 
     @Override
     public void neighborUpdate(BlockState state, World world, BlockPos pos, Block block, BlockPos updatedPos,
             boolean b) {
-        //Do nothing
+        if(ExtraDoors.COUPLINGS){
+            DoorHooks.neighborUpdateCallback(state, world, pos, block, updatedPos, false);
+        }
     }
 
     @Override

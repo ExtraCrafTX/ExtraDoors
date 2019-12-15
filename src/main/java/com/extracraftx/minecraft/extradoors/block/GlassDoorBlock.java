@@ -1,5 +1,9 @@
 package com.extracraftx.minecraft.extradoors.block;
 
+import com.extracraftx.minecraft.extradoors.CouplingsHelper;
+import com.extracraftx.minecraft.extradoors.ExtraDoors;
+
+import io.github.insomniakitten.couplings.Couplings;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -27,6 +31,18 @@ public class GlassDoorBlock extends DoorBlock {
                 BlockState newState = state.with(POWERED, true).cycle(OPEN);
                 world.setBlockState(pos, newState, 2);
                 world.playLevelEvent(null, state.get(OPEN) ? 1012 : 1006, pos, 0);
+                if(ExtraDoors.COUPLINGS){
+                    if (Couplings.areDoorsEnabled()) {
+                        final BlockPos offset = CouplingsHelper.getOtherDoor(state, pos);
+                        BlockState other = world.getBlockState(offset);
+                        if (state.getBlock() == other.getBlock()) {
+                            int power = CouplingsHelper.getPower(state, world, pos);
+                            if(power > 7){
+                                world.setBlockState(offset, other.with(OPEN, newState.get(OPEN)), 2);
+                            }
+                        }
+                    }
+                }
             }else{
                 world.setBlockState(pos, state.with(POWERED, false), 2);
             }
