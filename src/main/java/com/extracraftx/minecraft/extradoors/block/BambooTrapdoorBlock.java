@@ -1,5 +1,8 @@
 package com.extracraftx.minecraft.extradoors.block;
 
+import com.extracraftx.minecraft.extradoors.ExtraDoors;
+
+import io.github.insomniakitten.couplings.hook.TrapdoorHooks;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -30,6 +33,9 @@ public class BambooTrapdoorBlock extends TrapdoorBlock {
         if(state.get(WATERLOGGED))
             world.getFluidTickScheduler().schedule(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
         playSound(world, player, pos, state);
+        if(ExtraDoors.COUPLINGS){
+            TrapdoorHooks.usageCallback(state, world, pos, player, hand, hitResult, true);
+        }
         return true;
     }
 
