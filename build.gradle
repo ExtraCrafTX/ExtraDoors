@@ -27,7 +27,9 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 	modImplementation "couplings:Couplings:1.2.0"
     
-	modImplementation "com.extracraftx.minecraft:ProgrammerArtInjector:1.0.0"
+	modImplementation ("com.extracraftx.minecraft:ProgrammerArtInjector:1.0.0"){
+		exclude group: 'net.fabricmc'
+	}
     include "com.extracraftx.minecraft:ProgrammerArtInjector:1.0.0"
 }
 
