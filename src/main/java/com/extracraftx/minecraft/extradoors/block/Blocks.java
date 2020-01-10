@@ -86,6 +86,8 @@ public class Blocks {
     }
     
     public static void setRenderLayers(){
+        BlockRenderLayerMap.INSTANCE.putBlock(GOLD_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(GOLD_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GLASS_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GLASS_TRAPDOOR, RenderLayer.getCutout());
 

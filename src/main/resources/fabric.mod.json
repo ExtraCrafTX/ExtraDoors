@@ -23,6 +23,9 @@
     "fabricloader": ">=0.4.0",
     "fabric": "*"
   },
+  "recommends": {
+    "programmerartinjector": "*"
+  },
   "mixins": [
     "extradoors.mixins.json"
   ]
