@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom",
+    "textures": {
+        "bottom": "extradoors:block/crimson_glass_door_bottom",
+        "top": "extradoors:block/crimson_glass_door_top"
+    }
+}

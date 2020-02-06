@@ -5,6 +5,8 @@
         "extradoors:birch_glass_trapdoor",
         "extradoors:jungle_glass_trapdoor",
         "extradoors:acacia_glass_trapdoor",
-        "extradoors:dark_oak_glass_trapdoor"
+        "extradoors:dark_oak_glass_trapdoor",
+        "extradoors:crimson_glass_trapdoor",
+        "extradoors:warped_glass_trapdoor"
     ]
 }

@@ -7,6 +7,8 @@ import static net.minecraft.block.Blocks.BIRCH_DOOR;
 import static net.minecraft.block.Blocks.JUNGLE_DOOR;
 import static net.minecraft.block.Blocks.ACACIA_DOOR;
 import static net.minecraft.block.Blocks.DARK_OAK_DOOR;
+import static net.minecraft.block.Blocks.CRIMSON_DOOR;
+import static net.minecraft.block.Blocks.WARPED_DOOR;
 
 import static net.minecraft.block.Blocks.IRON_TRAPDOOR;
 import static net.minecraft.block.Blocks.OAK_TRAPDOOR;
@@ -15,6 +17,8 @@ import static net.minecraft.block.Blocks.BIRCH_TRAPDOOR;
 import static net.minecraft.block.Blocks.JUNGLE_TRAPDOOR;
 import static net.minecraft.block.Blocks.ACACIA_TRAPDOOR;
 import static net.minecraft.block.Blocks.DARK_OAK_TRAPDOOR;
+import static net.minecraft.block.Blocks.CRIMSON_TRAPDOOR;
+import static net.minecraft.block.Blocks.WARPED_TRAPDOOR;
 
 import com.extracraftx.minecraft.extradoors.ExtraDoors;
 
@@ -45,6 +49,8 @@ public class Blocks {
     public static DoorBlock JUNGLE_GLASS_DOOR;
     public static DoorBlock ACACIA_GLASS_DOOR;
     public static DoorBlock DARK_OAK_GLASS_DOOR;
+    public static DoorBlock CRIMSON_GLASS_DOOR;
+    public static DoorBlock WARPED_GLASS_DOOR;
     public static GoldDoorBlock GOLD_GLASS_DOOR;
 
     public static TrapdoorBlock OAK_GLASS_TRAPDOOR;
@@ -53,6 +59,8 @@ public class Blocks {
     public static TrapdoorBlock JUNGLE_GLASS_TRAPDOOR;
     public static TrapdoorBlock ACACIA_GLASS_TRAPDOOR;
     public static TrapdoorBlock DARK_OAK_GLASS_TRAPDOOR;
+    public static TrapdoorBlock CRIMSON_GLASS_TRAPDOOR;
+    public static TrapdoorBlock WARPED_GLASS_TRAPDOOR;
     public static TrapdoorBlock IRON_GLASS_TRAPDOOR;
     public static GoldTrapdoorBlock GOLD_GLASS_TRAPDOOR;
 
@@ -71,6 +79,8 @@ public class Blocks {
         JUNGLE_GLASS_DOOR = registerBlock("jungle_glass_door", new ExtraDoorBlock(JUNGLE_DOOR), ItemGroup.REDSTONE);
         ACACIA_GLASS_DOOR = registerBlock("acacia_glass_door", new ExtraDoorBlock(ACACIA_DOOR), ItemGroup.REDSTONE);
         DARK_OAK_GLASS_DOOR = registerBlock("dark_oak_glass_door", new ExtraDoorBlock(DARK_OAK_DOOR), ItemGroup.REDSTONE);
+        CRIMSON_GLASS_DOOR = registerBlock("crimson_glass_door", new ExtraDoorBlock(CRIMSON_DOOR), ItemGroup.REDSTONE);
+        WARPED_GLASS_DOOR = registerBlock("warped_glass_door", new ExtraDoorBlock(WARPED_DOOR), ItemGroup.REDSTONE);
         
         GOLD_GLASS_DOOR = registerBlock("gold_glass_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
 
@@ -80,6 +90,8 @@ public class Blocks {
         JUNGLE_GLASS_TRAPDOOR = registerBlock("jungle_glass_trapdoor", new ExtraTrapdoorBlock(JUNGLE_TRAPDOOR), ItemGroup.REDSTONE);
         ACACIA_GLASS_TRAPDOOR = registerBlock("acacia_glass_trapdoor", new ExtraTrapdoorBlock(ACACIA_TRAPDOOR), ItemGroup.REDSTONE);
         DARK_OAK_GLASS_TRAPDOOR = registerBlock("dark_oak_glass_trapdoor", new ExtraTrapdoorBlock(DARK_OAK_TRAPDOOR), ItemGroup.REDSTONE);
+        CRIMSON_GLASS_TRAPDOOR = registerBlock("crimson_glass_trapdoor", new ExtraTrapdoorBlock(CRIMSON_TRAPDOOR), ItemGroup.REDSTONE);
+        WARPED_GLASS_TRAPDOOR = registerBlock("warped_glass_trapdoor", new ExtraTrapdoorBlock(WARPED_TRAPDOOR), ItemGroup.REDSTONE);
         IRON_GLASS_TRAPDOOR = registerBlock("iron_glass_trapdoor", new ExtraTrapdoorBlock(IRON_TRAPDOOR), ItemGroup.REDSTONE);
         
         GOLD_GLASS_TRAPDOOR = registerBlock("gold_glass_trapdoor", new GoldTrapdoorBlock(), ItemGroup.REDSTONE);
@@ -99,6 +111,8 @@ public class Blocks {
         BlockRenderLayerMap.INSTANCE.putBlock(JUNGLE_GLASS_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ACACIA_GLASS_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_OAK_GLASS_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(CRIMSON_GLASS_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(WARPED_GLASS_DOOR, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(GOLD_GLASS_DOOR, RenderLayer.getCutout());
 
@@ -109,6 +123,8 @@ public class Blocks {
         BlockRenderLayerMap.INSTANCE.putBlock(JUNGLE_GLASS_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ACACIA_GLASS_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(DARK_OAK_GLASS_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(CRIMSON_GLASS_TRAPDOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(WARPED_GLASS_TRAPDOOR, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(GOLD_GLASS_TRAPDOOR, RenderLayer.getCutout());
     }

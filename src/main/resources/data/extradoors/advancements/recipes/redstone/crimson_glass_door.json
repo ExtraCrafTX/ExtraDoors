@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "extradoors:crimson_glass_door"
+        ]
+    },
+    "criteria": {
+        "has_crimson_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:crimson_door"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "extradoors:crimson_glass_door"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_crimson_door",
+            "has_the_recipe"
+        ]
+    ]
+}
