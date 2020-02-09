@@ -23,14 +23,9 @@ public abstract class LivingEntityMixin extends Entity implements TeleportableLi
         double oldZ = this.z;
         float oldYaw = this.yaw;
         float oldPitch = this.pitch;
-        this.x = x;
-        this.y = y;
-        this.z = z;
-        this.yaw = yaw;
-        this.pitch = pitch;
 
         boolean successful = false;
-        BlockPos currentBlockPos = new BlockPos(this);
+        BlockPos currentBlockPos = new BlockPos(x, y, z);
         if(world.isBlockLoaded(currentBlockPos)){
             int blocksDown = 0;
             boolean found = false;
@@ -39,13 +34,12 @@ public abstract class LivingEntityMixin extends Entity implements TeleportableLi
                     found = true;
                 else{
                     currentBlockPos = currentBlockPos.down();
-                    this.y --;
+                    y --;
                     blocksDown ++;
                 }
             }
             if(found){
-                // this.requestTeleport(x, y, z);
-                ((TeleportableEntity)this).requestTeleport(this.x, this.y, this.z, yaw, pitch);
+                ((TeleportableEntity)this).requestTeleport(x, y, z, yaw, pitch);
                 if(!world.intersectsFluid(this.getBoundingBox())){
                     successful = true;
                 }
@@ -53,12 +47,6 @@ public abstract class LivingEntityMixin extends Entity implements TeleportableLi
         }
 
         if(!successful){
-            // this.requestTeleport(oldX, oldY, oldZ);
-            this.x = oldX;
-            this.y = oldY;
-            this.z = oldZ;
-            this.yaw = oldYaw;
-            this.pitch = oldPitch;
             ((TeleportableEntity)this).requestTeleport(oldX, oldY, oldZ, oldYaw, oldPitch);
             return false;
         }
