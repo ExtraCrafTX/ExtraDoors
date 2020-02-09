@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "purpur_trapdoor",
+    "pattern": [
+        "PPP",
+        "PPP"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:purpur_block"
+        }
+    },
+    "result": {
+        "item": "extradoors:purpur_trapdoor",
+        "count": 2
+    }
+}

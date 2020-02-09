@@ -3,7 +3,9 @@
         "extradoors:gold_trapdoor",
         "extradoors:bamboo_trapdoor",
         "extradoors:glass_trapdoor",
+        "extradoors:purpur_trapdoor",
         "extradoors:iron_glass_trapdoor",
-        "extradoors:gold_glass_trapdoor"
+        "extradoors:gold_glass_trapdoor",
+        "extradoors:purpur_glass_trapdoor"
     ]
 }

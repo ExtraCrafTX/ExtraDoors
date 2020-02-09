@@ -1,0 +1,32 @@
+{
+    "parent": "minecraft:recipes/root",
+    "rewards": {
+        "recipes": [
+            "extradoors:purpur_glass_door"
+        ]
+    },
+    "criteria": {
+        "has_purpur_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:purpur_door"
+                    }
+                ]
+            }
+        },
+        "has_the_recipe": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "extradoors:purpur_glass_door"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "has_purpur_door",
+            "has_the_recipe"
+        ]
+    ]
+}

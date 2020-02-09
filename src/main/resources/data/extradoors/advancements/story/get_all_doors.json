@@ -1,0 +1,289 @@
+{
+    "parent": "minecraft:story/enter_the_end",
+    "display": {
+        "icon": {
+            "item": "extradoors:purpur_door"
+        },
+        "title": {
+            "translate": "advancements.story.get_all_doors.title"
+        },
+        "description": {
+            "translate": "advancements.story.get_all_doors.description"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "rewards": {
+        "experience": 100
+    },
+    "criteria": {
+        "iron_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:iron_door"
+                    }
+                ]
+            }
+        },
+        "oak_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:oak_door"
+                    }
+                ]
+            }
+        },
+        "spruce_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:spruce_door"
+                    }
+                ]
+            }
+        },
+        "birch_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:birch_door"
+                    }
+                ]
+            }
+        },
+        "jungle_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:jungle_door"
+                    }
+                ]
+            }
+        },
+        "acacia_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:acacia_door"
+                    }
+                ]
+            }
+        },
+        "dark_oak_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:dark_oak_door"
+                    }
+                ]
+            }
+        },
+        "crimson_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:crimson_door"
+                    }
+                ]
+            }
+        },
+        "warped_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:warped_door"
+                    }
+                ]
+            }
+        },
+        "gold_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:gold_door"
+                    }
+                ]
+            }
+        },
+        "bamboo_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:bamboo_door"
+                    }
+                ]
+            }
+        },
+        "glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:glass_door"
+                    }
+                ]
+            }
+        },
+        "purpur_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:purpur_door"
+                    }
+                ]
+            }
+        },
+        "iron_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:iron_glass_door"
+                    }
+                ]
+            }
+        },
+        "oak_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:oak_glass_door"
+                    }
+                ]
+            }
+        },
+        "spruce_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:spruce_glass_door"
+                    }
+                ]
+            }
+        },
+        "birch_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:birch_glass_door"
+                    }
+                ]
+            }
+        },
+        "jungle_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:jungle_glass_door"
+                    }
+                ]
+            }
+        },
+        "acacia_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:acacia_glass_door"
+                    }
+                ]
+            }
+        },
+        "dark_oak_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:dark_oak_glass_door"
+                    }
+                ]
+            }
+        },
+        "crimson_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:crimson_glass_door"
+                    }
+                ]
+            }
+        },
+        "warped_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:warped_glass_door"
+                    }
+                ]
+            }
+        },
+        "gold_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:gold_glass_door"
+                    }
+                ]
+            }
+        },
+        "purpur_glass_door": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:purpur_glass_door"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        ["iron_door"],
+        ["oak_door"],
+        ["spruce_door"],
+        ["birch_door"],
+        ["jungle_door"],
+        ["acacia_door"],
+        ["dark_oak_door"],
+        ["crimson_door"],
+        ["warped_door"],
+        ["gold_door"],
+        ["bamboo_door"],
+        ["glass_door"],
+        ["purpur_door"],
+        ["iron_glass_door"],
+        ["oak_glass_door"],
+        ["spruce_glass_door"],
+        ["birch_glass_door"],
+        ["jungle_glass_door"],
+        ["acacia_glass_door"],
+        ["dark_oak_glass_door"],
+        ["crimson_glass_door"],
+        ["warped_glass_door"],
+        ["gold_glass_door"],
+        ["purpur_glass_door"]
+    ]
+}

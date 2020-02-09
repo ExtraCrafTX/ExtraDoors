@@ -41,6 +41,8 @@ public class Blocks {
     public static BambooTrapdoorBlock BAMBOO_TRAPDOOR;
     public static GlassDoorBlock GLASS_DOOR;
     public static GlassTrapdoorBlock GLASS_TRAPDOOR;
+    public static PurpurDoorBlock PURPUR_DOOR;
+    public static PurpurTrapdoorBlock PURPUR_TRAPDOOR;
 
     public static DoorBlock IRON_GLASS_DOOR;
     public static DoorBlock OAK_GLASS_DOOR;
@@ -52,6 +54,7 @@ public class Blocks {
     public static DoorBlock CRIMSON_GLASS_DOOR;
     public static DoorBlock WARPED_GLASS_DOOR;
     public static GoldDoorBlock GOLD_GLASS_DOOR;
+    public static PurpurDoorBlock PURPUR_GLASS_DOOR;
 
     public static TrapdoorBlock OAK_GLASS_TRAPDOOR;
     public static TrapdoorBlock SPRUCE_GLASS_TRAPDOOR;
@@ -63,6 +66,7 @@ public class Blocks {
     public static TrapdoorBlock WARPED_GLASS_TRAPDOOR;
     public static TrapdoorBlock IRON_GLASS_TRAPDOOR;
     public static GoldTrapdoorBlock GOLD_GLASS_TRAPDOOR;
+    public static PurpurTrapdoorBlock PURPUR_GLASS_TRAPDOOR;
 
     public static void registerBlocks() {
         GOLD_DOOR = registerBlock("gold_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
@@ -71,6 +75,8 @@ public class Blocks {
         BAMBOO_TRAPDOOR = registerBlock("bamboo_trapdoor", new BambooTrapdoorBlock(), ItemGroup.DECORATIONS);
         GLASS_DOOR = registerBlock("glass_door", new GlassDoorBlock(), ItemGroup.REDSTONE);
         GLASS_TRAPDOOR = registerBlock("glass_trapdoor", new GlassTrapdoorBlock(), ItemGroup.REDSTONE);
+        PURPUR_DOOR = registerBlock("purpur_door", new PurpurDoorBlock(), ItemGroup.REDSTONE);
+        PURPUR_TRAPDOOR = registerBlock("purpur_trapdoor", new PurpurTrapdoorBlock(), ItemGroup.REDSTONE);
 
         IRON_GLASS_DOOR = registerBlock("iron_glass_door", new ExtraDoorBlock(IRON_DOOR), ItemGroup.REDSTONE);
         OAK_GLASS_DOOR = registerBlock("oak_glass_door", new ExtraDoorBlock(OAK_DOOR), ItemGroup.REDSTONE);
@@ -83,6 +89,7 @@ public class Blocks {
         WARPED_GLASS_DOOR = registerBlock("warped_glass_door", new ExtraDoorBlock(WARPED_DOOR), ItemGroup.REDSTONE);
         
         GOLD_GLASS_DOOR = registerBlock("gold_glass_door", new GoldDoorBlock(), ItemGroup.REDSTONE);
+        PURPUR_GLASS_DOOR = registerBlock("purpur_glass_door", new PurpurDoorBlock(), ItemGroup.REDSTONE);
 
         OAK_GLASS_TRAPDOOR = registerBlock("oak_glass_trapdoor", new ExtraTrapdoorBlock(OAK_TRAPDOOR), ItemGroup.REDSTONE);
         SPRUCE_GLASS_TRAPDOOR = registerBlock("spruce_glass_trapdoor", new ExtraTrapdoorBlock(SPRUCE_TRAPDOOR), ItemGroup.REDSTONE);
@@ -95,6 +102,7 @@ public class Blocks {
         IRON_GLASS_TRAPDOOR = registerBlock("iron_glass_trapdoor", new ExtraTrapdoorBlock(IRON_TRAPDOOR), ItemGroup.REDSTONE);
         
         GOLD_GLASS_TRAPDOOR = registerBlock("gold_glass_trapdoor", new GoldTrapdoorBlock(), ItemGroup.REDSTONE);
+        PURPUR_GLASS_TRAPDOOR = registerBlock("purpur_glass_trapdoor", new PurpurTrapdoorBlock(), ItemGroup.REDSTONE);
     }
     
     public static void setRenderLayers(){
@@ -103,6 +111,9 @@ public class Blocks {
 
         BlockRenderLayerMap.INSTANCE.putBlock(GLASS_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(GLASS_TRAPDOOR, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(PURPUR_DOOR, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(PURPUR_TRAPDOOR, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(IRON_GLASS_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OAK_GLASS_DOOR, RenderLayer.getCutout());
@@ -116,6 +127,8 @@ public class Blocks {
 
         BlockRenderLayerMap.INSTANCE.putBlock(GOLD_GLASS_DOOR, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(PURPUR_GLASS_DOOR, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(IRON_GLASS_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(OAK_GLASS_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(SPRUCE_GLASS_TRAPDOOR, RenderLayer.getCutout());
@@ -127,6 +140,8 @@ public class Blocks {
         BlockRenderLayerMap.INSTANCE.putBlock(WARPED_GLASS_TRAPDOOR, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(GOLD_GLASS_TRAPDOOR, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(PURPUR_GLASS_TRAPDOOR, RenderLayer.getCutout());
     }
 
     private static <T extends Block> T registerBlock(String name, T block, ItemGroup group) {

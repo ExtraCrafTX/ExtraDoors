@@ -1,0 +1,289 @@
+{
+    "parent": "minecraft:story/enter_the_end",
+    "display": {
+        "icon": {
+            "item": "extradoors:purpur_trapdoor"
+        },
+        "title": {
+            "translate": "advancements.story.get_all_trapdoors.title"
+        },
+        "description": {
+            "translate": "advancements.story.get_all_trapdoors.description"
+        },
+        "frame": "challenge",
+        "show_toast": true,
+        "announce_to_chat": true,
+        "hidden": true
+    },
+    "rewards": {
+        "experience": 100
+    },
+    "criteria": {
+        "iron_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:iron_trapdoor"
+                    }
+                ]
+            }
+        },
+        "oak_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:oak_trapdoor"
+                    }
+                ]
+            }
+        },
+        "spruce_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:spruce_trapdoor"
+                    }
+                ]
+            }
+        },
+        "birch_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:birch_trapdoor"
+                    }
+                ]
+            }
+        },
+        "jungle_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:jungle_trapdoor"
+                    }
+                ]
+            }
+        },
+        "acacia_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:acacia_trapdoor"
+                    }
+                ]
+            }
+        },
+        "dark_oak_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:dark_oak_trapdoor"
+                    }
+                ]
+            }
+        },
+        "crimson_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:crimson_trapdoor"
+                    }
+                ]
+            }
+        },
+        "warped_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "minecraft:warped_trapdoor"
+                    }
+                ]
+            }
+        },
+        "gold_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:gold_trapdoor"
+                    }
+                ]
+            }
+        },
+        "bamboo_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:bamboo_trapdoor"
+                    }
+                ]
+            }
+        },
+        "glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "purpur_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:purpur_trapdoor"
+                    }
+                ]
+            }
+        },
+        "iron_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:iron_glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "oak_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:oak_glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "spruce_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:spruce_glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "birch_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:birch_glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "jungle_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:jungle_glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "acacia_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:acacia_glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "dark_oak_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:dark_oak_glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "crimson_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:crimson_glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "warped_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:warped_glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "gold_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:gold_glass_trapdoor"
+                    }
+                ]
+            }
+        },
+        "purpur_glass_trapdoor": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "item": "extradoors:purpur_glass_trapdoor"
+                    }
+                ]
+            }
+        }
+    },
+    "requirements": [
+        ["iron_trapdoor"],
+        ["oak_trapdoor"],
+        ["spruce_trapdoor"],
+        ["birch_trapdoor"],
+        ["jungle_trapdoor"],
+        ["acacia_trapdoor"],
+        ["dark_oak_trapdoor"],
+        ["crimson_trapdoor"],
+        ["warped_trapdoor"],
+        ["gold_trapdoor"],
+        ["bamboo_trapdoor"],
+        ["glass_trapdoor"],
+        ["purpur_trapdoor"],
+        ["iron_glass_trapdoor"],
+        ["oak_glass_trapdoor"],
+        ["spruce_glass_trapdoor"],
+        ["birch_glass_trapdoor"],
+        ["jungle_glass_trapdoor"],
+        ["acacia_glass_trapdoor"],
+        ["dark_oak_glass_trapdoor"],
+        ["crimson_glass_trapdoor"],
+        ["warped_glass_trapdoor"],
+        ["gold_glass_trapdoor"],
+        ["purpur_glass_trapdoor"]
+    ]
+}
