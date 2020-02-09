@@ -4,7 +4,10 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "InteractableDoorsSensorMixin",
-    "OpenDoorsTaskMixin"
+    "OpenDoorsTaskMixin",
+    "ServerPlayerEntityMixin",
+    "LivingEntityMixin",
+    "EntityMixin"
   ],
   "client": [],
   "server": [],
