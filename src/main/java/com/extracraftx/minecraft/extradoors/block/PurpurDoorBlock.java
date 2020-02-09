@@ -46,7 +46,7 @@ public class PurpurDoorBlock extends DoorBlock{
         toPos = toPos.offset(hitResult.getSide().getOpposite());
         if(!world.getBlockState(toPos).canSuffocate(world, toPos)){
             //Space available, teleport
-            if (((TeleportableLivingEntity)player).teleport(toPos.getX()+0.5, toPos.getY(), toPos.getZ()+0.5, player.yaw + 180, player.pitch, true)) {
+            if (((TeleportableLivingEntity)player).teleport(toPos.getX()+0.5, toPos.getY(), toPos.getZ()+0.5, player.yaw + 180, player.pitch, true, 0)) {
                 world.playSound(null, toPos.getX()+0.5, toPos.getY(), toPos.getZ()+0.5, SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
                 // player.playSound(SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, 1.0F, 1.0F);
             }else{

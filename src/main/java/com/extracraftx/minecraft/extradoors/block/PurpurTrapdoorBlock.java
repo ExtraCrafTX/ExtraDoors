@@ -43,17 +43,15 @@ public class PurpurTrapdoorBlock extends TrapdoorBlock{
         BlockPos toPos = pos.offset(hitResult.getSide().getOpposite());
         if(!world.getBlockState(toPos).canSuffocate(world, toPos)){
             //Space available, teleport
-            if (!world.isClient){
-                if(((TeleportableLivingEntity)player).teleport(toPos.getX()+0.5, toPos.getY(), toPos.getZ()+0.5, player.yaw, -player.pitch, true, 4)){
-                    world.playSound(null, toPos.getX()+0.5, toPos.getY(), toPos.getZ()+0.5, SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
-                }else{
-                    //Couldn't teleport, open instead
-                    BlockState newState = state.with(OPEN, true);
-                    world.setBlockState(pos, newState, 10);
-                    world.playLevelEvent(player, 1007, pos, 0);
-                }
-                // player.playSound(SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, 1.0F, 1.0F);
+            if(((TeleportableLivingEntity)player).teleport(toPos.getX()+0.5, toPos.getY(), toPos.getZ()+0.5, player.yaw, -player.pitch, true, 4)){
+                world.playSound(null, toPos.getX()+0.5, toPos.getY(), toPos.getZ()+0.5, SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
+            }else{
+                //Couldn't teleport, open instead
+                BlockState newState = state.with(OPEN, true);
+                world.setBlockState(pos, newState, 10);
+                world.playLevelEvent(player, 1007, pos, 0);
             }
+            // player.playSound(SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, 1.0F, 1.0F);
             return true;
         }
         //Blocked, open instead
