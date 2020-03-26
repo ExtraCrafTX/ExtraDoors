@@ -1,12 +1,11 @@
 package com.extracraftx.minecraft.extradoors.block;
 
-import com.extracraftx.minecraft.extradoors.ExtraDoors;
 import com.extracraftx.minecraft.extradoors.CouplingsHelper;
+import com.extracraftx.minecraft.extradoors.ExtraDoors;
 import com.extracraftx.minecraft.extradoors.sound.Sounds;
 
 import io.github.chloedawn.couplings.Couplings;
 import io.github.chloedawn.couplings.Doors;
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DoorBlock;
@@ -27,8 +26,8 @@ import net.minecraft.world.World;
 public class GoldDoorBlock extends DoorBlock {
 
     public GoldDoorBlock() {
-        super(FabricBlockSettings.of(Material.METAL, MaterialColor.GOLD).strength(4, 4).sounds(BlockSoundGroup.METAL)
-                .nonOpaque().build());
+        super(Settings.of(Material.METAL, MaterialColor.GOLD).strength(4, 4).sounds(BlockSoundGroup.METAL)
+                .nonOpaque());
     }
 
     @Override

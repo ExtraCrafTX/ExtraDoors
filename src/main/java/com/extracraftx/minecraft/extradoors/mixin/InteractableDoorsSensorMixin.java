@@ -12,7 +12,7 @@ import net.minecraft.tag.Tag;
 @Mixin(InteractableDoorsSensor.class)
 public class InteractableDoorsSensorMixin{
 
-    @ModifyArg(method = "sense", at = @At(value="INVOKE", target = "Lnet/minecraft/block/BlockState;matches(Lnet/minecraft/tag/Tag;)Z"), index=0)
+    @ModifyArg(method = "sense", at = @At(value="INVOKE", target = "Lnet/minecraft/block/BlockState;isIn(Lnet/minecraft/tag/Tag;)Z"), index=0)
     private Tag modifyTag(Tag tag){
         return Tags.INTERACTABLE_DOORS;
     }

@@ -3,7 +3,6 @@ package com.extracraftx.minecraft.extradoors.block;
 import com.extracraftx.minecraft.extradoors.ExtraDoors;
 
 import io.github.chloedawn.couplings.Doors;
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DoorBlock;
@@ -22,7 +21,7 @@ import net.minecraft.world.World;
 public class BambooDoorBlock extends DoorBlock {
 
     public BambooDoorBlock() {
-        super(FabricBlockSettings.of(Material.BAMBOO).strength(1f, 1f).sounds(BlockSoundGroup.BAMBOO).build());
+        super(Settings.of(Material.BAMBOO).strength(1f, 1f).sounds(BlockSoundGroup.BAMBOO));
     }
 
     @Override

@@ -4,7 +4,6 @@ import com.extracraftx.minecraft.extradoors.ExtraDoors;
 import com.extracraftx.minecraft.extradoors.interfaces.TeleportableLivingEntity;
 
 import io.github.chloedawn.couplings.Trapdoors;
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.MaterialColor;
@@ -21,7 +20,7 @@ import net.minecraft.world.World;
 public class PurpurTrapdoorBlock extends TrapdoorBlock{
 
     public PurpurTrapdoorBlock() {
-        super(FabricBlockSettings.of(Material.STONE, MaterialColor.MAGENTA).strength(1.5f, 6f).nonOpaque().build());
+        super(Settings.of(Material.STONE, MaterialColor.MAGENTA).strength(1.5f, 6f).nonOpaque());
     }
 
     @Override
@@ -42,7 +41,7 @@ public class PurpurTrapdoorBlock extends TrapdoorBlock{
             return ActionResult.FAIL;
         }
         BlockPos toPos = pos.offset(hitResult.getSide().getOpposite());
-        if(!world.getBlockState(toPos).canSuffocate(world, toPos)){
+        if(!world.getBlockState(toPos).shouldSuffocate(world, toPos)){
             //Space available, teleport
             if(((TeleportableLivingEntity)player).teleport(toPos.getX()+0.5, toPos.getY(), toPos.getZ()+0.5, player.yaw, -player.pitch, true, 4)){
                 world.playSound(null, toPos.getX()+0.5, toPos.getY(), toPos.getZ()+0.5, SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
