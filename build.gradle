@@ -3,9 +3,9 @@ plugins {
 	id 'maven-publish'
 }
 
-repositories{
-	maven {url "https://minecraft.curseforge.com/api/maven"}
-    maven { url "https://maven.extracraftx.com"}
+repositories {
+	maven { url "https://minecraft.curseforge.com/api/maven" }
+    maven { url "https://maven.extracraftx.com" }
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -27,8 +27,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
 	modImplementation "couplings:Couplings:1.2.0"
     
-	modImplementation "com.extracraftx.minecraft:ProgrammerArtInjector:1.1.0"
-    include "com.extracraftx.minecraft:ProgrammerArtInjector:1.1.0"
+	modImplementation "com.extracraftx.minecraft:ProgrammerArtInjector:1.1.1"
+    include "com.extracraftx.minecraft:ProgrammerArtInjector:1.1.1"
 }
 
 processResources {
@@ -67,6 +67,9 @@ jar {
 publishing {
 	publications {
 		mavenJava(MavenPublication) {
+			groupId = group
+			artifactId = archivesBaseName
+
 			// add all the jars that should be included when publishing to maven
 			artifact(jar) {
 				builtBy remapJar
@@ -82,7 +85,13 @@ publishing {
 
 	// select the repositories you want to publish to
 	repositories {
-		// uncomment to publish to the local maven
-		// mavenLocal()
+		mavenLocal()
+		maven{
+			url = extracraftxMaven
+			credentials {
+				username = extracraftxMavenUsername
+				password = extracraftxMavenPassword
+			}
+		}
 	}
 }
