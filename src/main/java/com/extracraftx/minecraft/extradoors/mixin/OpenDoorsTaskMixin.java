@@ -13,8 +13,8 @@ import net.minecraft.tag.Tag;
 @Mixin(OpenDoorsTask.class)
 public class OpenDoorsTaskMixin{
 
-    @Redirect(method = "*", at = @At(value = "INVOKE", target = "Lnet/minecraft/tag/Tag;contains(Ljava/lang/Object;)Z"))
-    private static boolean containsProxy(Tag tag, Object obj){
+    @Redirect(method = "*", at = @At(value = "INVOKE", target = "Lnet/minecraft/tag/Tag$Identified;contains(Ljava/lang/Object;)Z"))
+    private static boolean containsProxy(Tag.Identified tag, Object obj){
         Block block = (Block) obj;
         return Tags.INTERACTABLE_DOORS.contains(block);
     }
