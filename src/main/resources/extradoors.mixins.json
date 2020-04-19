@@ -7,7 +7,8 @@
     "OpenDoorsTaskMixin",
     "ServerPlayerEntityMixin",
     "LivingEntityMixin",
-    "EntityMixin"
+    "EntityMixin",
+    "LandPathNodeMakerMixin"
   ],
   "client": [],
   "server": [],
