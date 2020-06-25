@@ -31,7 +31,7 @@ public class PurpurTrapdoorBlock extends TrapdoorBlock{
             //If door is open, just close it
             BlockState newState = state.with(OPEN, false);
             world.setBlockState(pos, newState, 10);
-            world.playLevelEvent(player, 1013, pos, 0);
+            world.syncWorldEvent(player, 1013, pos, 0);
             if(ExtraDoors.COUPLINGS)
                 Trapdoors.used(newState, world, pos, player, hand, hitResult, ActionResult.SUCCESS);
             return ActionResult.SUCCESS;
@@ -49,7 +49,7 @@ public class PurpurTrapdoorBlock extends TrapdoorBlock{
                 //Couldn't teleport, open instead
                 BlockState newState = state.with(OPEN, true);
                 world.setBlockState(pos, newState, 10);
-                world.playLevelEvent(player, 1007, pos, 0);
+                world.syncWorldEvent(player, 1007, pos, 0);
             }
             // player.playSound(SoundEvents.ITEM_CHORUS_FRUIT_TELEPORT, 1.0F, 1.0F);
             return ActionResult.SUCCESS;
@@ -57,7 +57,7 @@ public class PurpurTrapdoorBlock extends TrapdoorBlock{
         //Blocked, open instead
         BlockState newState = state.with(OPEN, true);
         world.setBlockState(pos, newState);
-        world.playLevelEvent(player, 1007, pos, 0);
+        world.syncWorldEvent(player, 1007, pos, 0);
         return ActionResult.SUCCESS;
     }
     

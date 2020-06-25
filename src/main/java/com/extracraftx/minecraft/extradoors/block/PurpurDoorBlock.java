@@ -31,7 +31,7 @@ public class PurpurDoorBlock extends DoorBlock{
             //If door is open, just close it
             BlockState newState = state.with(OPEN, false);
             world.setBlockState(pos, newState, 10);
-            world.playLevelEvent(player, 1006, pos, 0);
+            world.syncWorldEvent(player, 1006, pos, 0);
             if(ExtraDoors.COUPLINGS)
                 Doors.used(newState, world, pos, player, hand, hitResult, ActionResult.SUCCESS);
             return ActionResult.SUCCESS;
@@ -53,7 +53,7 @@ public class PurpurDoorBlock extends DoorBlock{
                 //Couldn't teleport, open instead
                 BlockState newState = state.with(OPEN, true);
                 world.setBlockState(pos, newState, 10);
-                world.playLevelEvent(player, 1012, pos, 0);
+                world.syncWorldEvent(player, 1012, pos, 0);
                 if(ExtraDoors.COUPLINGS)
                     Doors.toggled(state, world, pos, true);
             }
@@ -62,7 +62,7 @@ public class PurpurDoorBlock extends DoorBlock{
         //Blocked, open instead
         BlockState newState = state.with(OPEN, true);
         world.setBlockState(pos, newState, 10);
-        world.playLevelEvent(player, 1012, pos, 0);
+        world.syncWorldEvent(player, 1012, pos, 0);
         if(ExtraDoors.COUPLINGS)
             Doors.toggled(state, world, pos, true);
         return ActionResult.SUCCESS;

@@ -14,29 +14,22 @@ import net.minecraft.world.World;
 @Mixin(Entity.class)
 public abstract class EntityMixin implements TeleportableEntity{
 
-    @Shadow
-    private boolean teleportRequested;
+    @Shadow public abstract void requestTeleport(double destX, double destY, double destZ);
+
+    @Shadow public float pitch;
     @Shadow
     private World world;
+
+    @Shadow public float yaw;
 
     @Override
     public void requestTeleport(double x, double y, double z, float yaw, float pitch) {
         if(!world.isClient){
-            ServerWorld serverWorld = (ServerWorld)this.world;
-            teleportRequested = true;
-            this.refreshPositionAndAngles(x, y, z, yaw, pitch);
-            this.streamPassengersRecursively().forEach((entity) -> {
-               serverWorld.checkChunk(entity);
-               ((EntityAccessor)entity).setTeleportRequested(true);
-               entity.updatePositionsRecursively(Entity::positAfterTeleport);
-            });
+            this.yaw=yaw;
+            this.pitch=pitch;
+            requestTeleport(x,y,z);
         }
     }
 
-    @Shadow
-    public abstract void refreshPositionAndAngles(double x, double y, double z, float yaw, float pitch);
-    
-    @Shadow
-    public abstract Stream<Entity> streamPassengersRecursively();
 
 }

@@ -36,7 +36,7 @@ public class GoldDoorBlock extends DoorBlock {
         if (!state.get(POWERED)) {
             state = state.cycle(OPEN);
             world.setBlockState(pos, state, 10);
-            world.playLevelEvent(player, state.get(OPEN) ? 1011 : 1005, pos, 0);
+            world.syncWorldEvent(player, state.get(OPEN) ? 1011 : 1005, pos, 0);
             if(ExtraDoors.COUPLINGS){
                 Doors.used(state, world, pos, player, hand, hitResult, ActionResult.SUCCESS);
             }

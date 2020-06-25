@@ -29,7 +29,7 @@ public class GlassDoorBlock extends DoorBlock {
             if(isPowered){
                 BlockState newState = state.with(POWERED, true).cycle(OPEN);
                 world.setBlockState(pos, newState, 2);
-                world.playLevelEvent(null, state.get(OPEN) ? 1012 : 1006, pos, 0);
+                world.syncWorldEvent(null, state.get(OPEN) ? 1012 : 1006, pos, 0);
                 if(ExtraDoors.COUPLINGS){
                     if (Couplings.areDoorsEnabled()) {
                         final BlockPos offset = CouplingsHelper.getOtherDoor(state, pos);
