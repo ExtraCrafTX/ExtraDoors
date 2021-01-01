@@ -10,11 +10,12 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.DoorBlock;
 import net.minecraft.entity.ai.pathing.LandPathNodeMaker;
 
-@Mixin(LandPathNodeMaker.class)
-public class LandPathNodeMakerMixin {
+//Mixin after lithium
+@Mixin(value = LandPathNodeMaker.class, priority = 1001)
+public class LandPathNodeMakerLithiumCompatMixin {
 
     @Redirect(
-        method = "getCommonNodeType",
+        method = "getTaggedBlockType$lithium(Lnet/minecraft/class_2680;)Lnet/minecraft/class_7;",
         at = @At(target = "Lnet/minecraft/block/DoorBlock;isWoodenDoor(Lnet/minecraft/block/BlockState;)Z", value = "INVOKE")
     )
     private static boolean isInteractableDoor(BlockState state){

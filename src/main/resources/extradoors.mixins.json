@@ -9,10 +9,13 @@
     "LivingEntityMixin",
     "EntityMixin",
     "EntityAccessor",
-    "LandPathNodeMakerMixin"
+    "LandPathNodeMakerMixin",
+    "LandPathNodeMakerLithiumMixin",
+    "LandPathNodeMakerLithiumCompatMixin"
   ],
   "client": [],
   "server": [],
+  "plugin": "com.extracraftx.minecraft.extradoors.MixinPlugin",
   "injectors": {
     "defaultRequire": 1
   }

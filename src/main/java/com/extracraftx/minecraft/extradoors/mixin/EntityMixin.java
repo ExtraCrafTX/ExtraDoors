@@ -1,5 +1,6 @@
 package com.extracraftx.minecraft.extradoors.mixin;
 
+import java.util.Iterator;
 import java.util.stream.Stream;
 
 import com.extracraftx.minecraft.extradoors.interfaces.TeleportableEntity;
@@ -23,19 +24,24 @@ public abstract class EntityMixin implements TeleportableEntity{
     public void requestTeleport(double x, double y, double z, float yaw, float pitch) {
         if(!world.isClient){
             ServerWorld serverWorld = (ServerWorld)this.world;
-            teleportRequested = true;
+            // teleportRequested = true;
             this.refreshPositionAndAngles(x, y, z, yaw, pitch);
             this.streamPassengersRecursively().forEach((entity) -> {
-               serverWorld.checkChunk(entity);
-               ((EntityAccessor)entity).setTeleportRequested(true);
-               entity.updatePositionsRecursively(Entity::positAfterTeleport);
+                serverWorld.checkChunk(entity);
+                ((EntityAccessor)entity).setTeleportRequested(true);
+                Iterator<Entity> passengers = entity.getPassengerList().iterator();
+
+                while(passengers.hasNext()) {
+                    Entity passenger = passengers.next();
+                    ((EntityAccessor)entity).invokeUpdatePassengerPosition(passenger, Entity::positAfterTeleport);
+                }
             });
         }
     }
 
     @Shadow
     public abstract void refreshPositionAndAngles(double x, double y, double z, float yaw, float pitch);
-    
+
     @Shadow
     public abstract Stream<Entity> streamPassengersRecursively();
 

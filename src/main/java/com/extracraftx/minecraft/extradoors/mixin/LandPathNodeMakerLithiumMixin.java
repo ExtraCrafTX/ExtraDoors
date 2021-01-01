@@ -8,13 +8,12 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DoorBlock;
-import net.minecraft.entity.ai.pathing.LandPathNodeMaker;
 
-@Mixin(LandPathNodeMaker.class)
-public class LandPathNodeMakerMixin {
+@Mixin(targets = "me.jellysquid.mods.lithium.common.ai.LandPathNodeCache")
+public class LandPathNodeMakerLithiumMixin {
 
     @Redirect(
-        method = "getCommonNodeType",
+        method = "getTaggedBlockType(Lnet/minecraft/class_2680;)Lnet/minecraft/class_7;",
         at = @At(target = "Lnet/minecraft/block/DoorBlock;isWoodenDoor(Lnet/minecraft/block/BlockState;)Z", value = "INVOKE")
     )
     private static boolean isInteractableDoor(BlockState state){
