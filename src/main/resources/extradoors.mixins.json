@@ -3,7 +3,7 @@
   "package": "com.extracraftx.minecraft.extradoors.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "InteractableDoorsSensorMixin",
+    "DoorBlockMixin",
     "OpenDoorsTaskMixin",
     "ServerPlayerEntityMixin",
     "LivingEntityMixin",

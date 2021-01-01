@@ -27,13 +27,13 @@ public abstract class EntityMixin implements TeleportableEntity{
             // teleportRequested = true;
             this.refreshPositionAndAngles(x, y, z, yaw, pitch);
             this.streamPassengersRecursively().forEach((entity) -> {
-                serverWorld.checkChunk(entity);
+                serverWorld.checkEntityChunkPos(entity);
                 ((EntityAccessor)entity).setTeleportRequested(true);
                 Iterator<Entity> passengers = entity.getPassengerList().iterator();
 
                 while(passengers.hasNext()) {
                     Entity passenger = passengers.next();
-                    ((EntityAccessor)entity).invokeUpdatePassengerPosition(passenger, Entity::positAfterTeleport);
+                    ((EntityAccessor)entity).invokeUpdatePassengerPosition(passenger, Entity::refreshPositionAfterTeleport);
                 }
             });
         }

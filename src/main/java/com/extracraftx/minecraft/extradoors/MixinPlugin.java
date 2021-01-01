@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.util.version.SemanticVersionImpl;
 import net.fabricmc.loader.util.version.SemanticVersionPredicateParser;
-import net.fabricmc.loader.util.version.VersionParsingException;
+import net.fabricmc.loader.api.VersionParsingException;
 
 public class MixinPlugin implements IMixinConfigPlugin {
     private static Predicate<SemanticVersionImpl> LITHIUM_API;
@@ -60,14 +60,14 @@ public class MixinPlugin implements IMixinConfigPlugin {
     }
 
     @Override
-    public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if(mixinClassName.equals("com.extracraftx.minecraft.extradoors.mixin.LandPathNodeMakerMixin")){
+    public boolean shouldApplyMixin(String targetClass, String mixinClass) {
+        if(mixinClass.equals("com.extracraftx.minecraft.extradoors.mixin.LandPathNodeMakerMixin")){
             return LITHIUM_MIXIN == LithiumMixinType.NONE;
         }
-        if(mixinClassName.equals("com.extracraftx.minecraft.extradoors.mixin.LandPathNodeMakerLithiumCompatMixin")){
+        if(mixinClass.equals("com.extracraftx.minecraft.extradoors.mixin.LandPathNodeMakerLithiumCompatMixin")){
             return LITHIUM_MIXIN == LithiumMixinType.DIRECT;
         }
-        if(mixinClassName.equals("com.extracraftx.minecraft.extradoors.mixin.LandPathNodeMakerLithiumMixin")){
+        if(mixinClass.equals("com.extracraftx.minecraft.extradoors.mixin.LandPathNodeMakerLithiumMixin")){
             return LITHIUM_MIXIN == LithiumMixinType.SEPARATE;
         }
         return true;
